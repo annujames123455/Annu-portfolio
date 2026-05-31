@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Annu James | CS Student & Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Annu James, a Computer Science Engineering student & Full-Stack Web Developer. Explore projects like Splittr, Expense Tracker, and WhatsApp Automation.">
+  <meta name="keywords" content="Annu James, Portfolio, Computer Science student, Full-Stack Developer, Kottayam, Kerala, Web Development, GSSoC, Splittr">
+  <meta name="author" content="Annu James">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Annu James | CS Student & Full-Stack Developer Portfolio">
+  <meta property="og:description" content="Explore the portfolio of Annu James, featuring interactive projects, technical skillsets, and services.">
+  
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for sleek modern icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Background Canvas for Interactive Particles -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Premium Header & Glassmorphic Navigation -->
+  <header id="main-header" class="glass-header">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        Annu<span>James.</span>
+      </a>
+      
+      <nav id="desktop-nav" class="nav-links">
+        <a href="#hero" class="nav-link active" id="nav-home">Home</a>
+        <a href="#about" class="nav-link" id="nav-about">About</a>
+        <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
+        <a href="#projects" class="nav-link" id="nav-projects">Projects</a>
+        <a href="#services" class="nav-link" id="nav-services">Services</a>
+        <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle Switch -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+        
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-trigger" class="hamburger-btn" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div id="mobile-nav-overlay" class="mobile-menu-overlay">
+    <div class="mobile-menu-content glass-card">
+      <a href="#hero" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container container">
+        <div class="hero-content scroll-reveal">
+          <div class="badge-accent">Welcome to my space</div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="name-gradient">Annu James</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            <span id="typing-text"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-desc">
+            A second-year Computer Science & Engineering student and passionate full-stack web developer. I craft sleek, user-centric, high-performance web systems and actively contribute to open-source programs like GSSoC.
+          </p>
+          
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary" id="hero-btn-work">
+              View My Work <i class="fa-solid fa-arrow-down-long"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="hero-btn-contact">
+              Let's Talk <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+
+          <div class="social-dock">
+            <a href="https://github.com/dummy-annu" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/dummy-annu-james" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:annujames.dummy@email.com" class="social-icon" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual scroll-reveal">
+          <div class="visual-card-wrapper">
+            <div class="visual-card glass-card">
+              <div class="visual-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="tab-title">annu_james.py</span>
+              </div>
+              <div class="visual-body">
+                <pre><code><span class="keyword">class</span> <span class="class-name">Developer</span>:
+    <span class="keyword">def</span> <span class="method">__init__</span>(<span class="param">self</span>):
+        <span class="param">self</span>.name = <span class="string">"Annu James"</span>
+        <span class="param">self</span>.role = <span class="string">"CS Student & Developer"</span>
+        <span class="param">self</span>.location = <span class="string">"Kerala, India"</span>
+        
+    <span class="keyword">def</span> <span class="method">get_core_focus</span>(<span class="param">self</span>):
+        <span class="keyword">return</span> [
+            <span class="string">"Full-Stack Web Dev"</span>,
+            <span class="string">"Open-Source Contributor"</span>,
+            <span class="string">"AI/ML Engineering"</span>
+        ]
+
+    <span class="keyword">def</span> <span class="method">is_always_learning</span>(<span class="param">self</span>):
+        <span class="keyword">return</span> <span class="keyword">True</span></code></pre>
+              </div>
+            </div>
+            <div class="floating-badge badge-1 glass-card">
+              <i class="fa-solid fa-code text-cyan"></i>
+              <span>Full-Stack Web</span>
+            </div>
+            <div class="floating-badge badge-2 glass-card">
+              <i class="fa-solid fa-terminal text-purple"></i>
+              <span>GSSoC '24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & EDUCATION SECTION -->
+    <section id="about" class="about-section bg-alt-tint">
+      <div class="container scroll-reveal">
+        <div class="section-header">
+          <span class="subtitle">Get to Know Me</span>
+          <h2 class="title">About & Education</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Short Bio -->
+          <div class="about-bio glass-card">
+            <h3>Who is Annu James?</h3>
+            <p>
+              I am currently pursuing a Bachelor of Technology in Computer Science & Engineering. With hands-on experience in full-stack web development, backend engineering, and database management, I enjoy translating complex requirements into simple, beautifully integrated digital solutions.
+            </p>
+            <p>
+              I actively build projects, lead development teams, and engage with global engineering ecosystems like <strong>Rewriting The Code</strong>. I strive to design applications that make a tangible positive impact on society.
+            </p>
+            <div class="personal-details">
+              <div class="detail-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong>Institution</strong>
+                  <span>St. Joseph's College of Engineering & Technology, Palai</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Location</strong>
+                  <span>Kottayam, Kerala, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline of Accomplishments & Education -->
+          <div class="about-timeline glass-card">
+            <h3>Timeline & Milestones</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2024 - 2028</span>
+                  <h4>B.Tech in Computer Science & Engineering</h4>
+                  <p class="timeline-desc">
+                    Second-year student maintaining an outstanding <strong>CGPA of 8.38 / 10</strong>. Active in computer science clubs and engineering seminars.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2024 - 2025</span>
+                  <h4>Event Coordinator - Astra & Sargam</h4>
+                  <p class="timeline-desc">
+                    Coordinated college-level technical and cultural festivals, managing logistics, leading participant outreach, and team communications.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2024 - Present</span>
+                  <h4>Rewriting The Code (RTC) Member</h4>
+                  <p class="timeline-desc">
+                    Collaborating inside a global, supportive community focused on advancing women and underrepresented groups in technical careers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & EXPERTISE SECTION -->
+    <section id="skills" class="skills-section">
+      <div class="container scroll-reveal">
+        <div class="section-header">
+          <span class="subtitle">What I Do Best</span>
+          <h2 class="title">Skills & Expertise</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <!-- Filter tabs for Skills -->
+        <div class="skills-tabs">
+          <button class="skill-tab-btn active" data-skill-group="all">All Skills</button>
+          <button class="skill-tab-btn" data-skill-group="languages">Languages</button>
+          <button class="skill-tab-btn" data-skill-group="web">Web & Frameworks</button>
+          <button class="skill-tab-btn" data-skill-group="databases">Databases</button>
+          <button class="skill-tab-btn" data-skill-group="aiml">AI/ML</button>
+          <button class="skill-tab-btn" data-skill-group="tools">Tools & Concepts</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-display-grid">
+          <!-- Languages -->
+          <div class="skill-card glass-card" data-group="languages">
+            <div class="skill-icon-box python"><i class="fa-brands fa-python"></i></div>
+            <h4 class="skill-name">Python</h4>
+            <span class="skill-category">Language</span>
+          </div>
+          <div class="skill-card glass-card" data-group="languages">
+            <div class="skill-icon-box javascript"><i class="fa-brands fa-js"></i></div>
+            <h4 class="skill-name">JavaScript</h4>
+            <span class="skill-category">Language</span>
+          </div>
+          <div class="skill-card glass-card" data-group="languages">
+            <div class="skill-icon-box java"><i class="fa-brands fa-java"></i></div>
+            <h4 class="skill-name">Java</h4>
+            <span class="skill-category">Language</span>
+          </div>
+          <div class="skill-card glass-card" data-group="languages">
+            <div class="skill-icon-box cpp"><code class="tech-short">C++</code></div>
+            <h4 class="skill-name">C++ / C</h4>
+            <span class="skill-category">Language</span>
+          </div>
+          <div class="skill-card glass-card" data-group="languages">
+            <div class="skill-icon-box sql"><i class="fa-solid fa-database"></i></div>
+            <h4 class="skill-name">SQL</h4>
+            <span class="skill-category">Language</span>
+          </div>
+          <div class="skill-card glass-card" data-group="languages">
+            <div class="skill-icon-box r-lang"><i class="fa-solid fa-chart-line"></i></div>
+            <h4 class="skill-name">R</h4>
+            <span class="skill-category">Language</span>
+          </div>
+
+          <!-- Web & Frameworks -->
+          <div class="skill-card glass-card" data-group="web">
+            <div class="skill-icon-box html"><i class="fa-brands fa-html5"></i></div>
+            <h4 class="skill-name">HTML5 & CSS3</h4>
+            <span class="skill-category">Web Core</span>
+          </div>
+          <div class="skill-card glass-card" data-group="web">
+            <div class="skill-icon-box nextjs"><i class="fa-solid fa-circle-nodes"></i></div>
+            <h4 class="skill-name">Next.js</h4>
+            <span class="skill-category">Framework</span>
+          </div>
+          <div class="skill-card glass-card" data-group="web">
+            <div class="skill-icon-box nodejs"><i class="fa-brands fa-node-js"></i></div>
+            <h4 class="skill-name">Node.js</h4>
+            <span class="skill-category">Runtime</span>
+          </div>
+          <div class="skill-card glass-card" data-group="web">
+            <div class="skill-icon-box express"><code class="tech-short">Ex</code></div>
+            <h4 class="skill-name">Express.js</h4>
+            <span class="skill-category">Backend</span>
+          </div>
+          <div class="skill-card glass-card" data-group="web">
+            <div class="skill-icon-box tailwind"><i class="fa-brands fa-css3-alt"></i></div>
+            <h4 class="skill-name">Tailwind CSS</h4>
+            <span class="skill-category">Styling</span>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-card glass-card" data-group="databases">
+            <div class="skill-icon-box mysql"><i class="fa-solid fa-server"></i></div>
+            <h4 class="skill-name">MySQL</h4>
+            <span class="skill-category">Database</span>
+          </div>
+          <div class="skill-card glass-card" data-group="databases">
+            <div class="skill-icon-box mongodb"><i class="fa-solid fa-leaf"></i></div>
+            <h4 class="skill-name">MongoDB</h4>
+            <span class="skill-category">Database</span>
+          </div>
+          <div class="skill-card glass-card" data-group="databases">
+            <div class="skill-icon-box supabase"><i class="fa-solid fa-bolt"></i></div>
+            <h4 class="skill-name">Supabase</h4>
+            <span class="skill-category">Database / BaaS</span>
+          </div>
+
+          <!-- AI/ML -->
+          <div class="skill-card glass-card" data-group="aiml">
+            <div class="skill-icon-box pytorch"><code class="tech-short">PyT</code></div>
+            <h4 class="skill-name">PyTorch & Keras</h4>
+            <span class="skill-category">Deep Learning</span>
+          </div>
+          <div class="skill-card glass-card" data-group="aiml">
+            <div class="skill-icon-box tensorflow"><i class="fa-solid fa-brain"></i></div>
+            <h4 class="skill-name">TensorFlow</h4>
+            <span class="skill-category">AI Framework</span>
+          </div>
+          <div class="skill-card glass-card" data-group="aiml">
+            <div class="skill-icon-box scikit"><i class="fa-solid fa-calculator"></i></div>
+            <h4 class="skill-name">Scikit-Learn</h4>
+            <span class="skill-category">Machine Learning</span>
+          </div>
+          <div class="skill-card glass-card" data-group="aiml">
+            <div class="skill-icon-box opencv"><i class="fa-solid fa-eye"></i></div>
+            <h4 class="skill-name">OpenCV & NumPy</h4>
+            <span class="skill-category">Vision & Math</span>
+          </div>
+
+          <!-- Tools & Concepts -->
+          <div class="skill-card glass-card" data-group="tools">
+            <div class="skill-icon-box git"><i class="fa-brands fa-git-alt"></i></div>
+            <h4 class="skill-name">Git & GitHub</h4>
+            <span class="skill-category">VCS / DevOps</span>
+          </div>
+          <div class="skill-card glass-card" data-group="tools">
+            <div class="skill-icon-box linux"><i class="fa-brands fa-linux"></i></div>
+            <h4 class="skill-name">Linux / Bash</h4>
+            <span class="skill-category">Operating System</span>
+          </div>
+          <div class="skill-card glass-card" data-group="tools">
+            <div class="skill-icon-box restapi"><i class="fa-solid fa-network-wired"></i></div>
+            <h4 class="skill-name">REST APIs</h4>
+            <span class="skill-category">Concept</span>
+          </div>
+          <div class="skill-card glass-card" data-group="tools">
+            <div class="skill-icon-box oop"><i class="fa-solid fa-cubes"></i></div>
+            <h4 class="skill-name">OOP & DS</h4>
+            <span class="skill-category">Data Structures</span>
+          </div>
+          <div class="skill-card glass-card" data-group="tools">
+            <div class="skill-icon-box cicd"><i class="fa-solid fa-rotate"></i></div>
+            <h4 class="skill-name">CI/CD & Agile</h4>
+            <span class="skill-category">DevOps Methodology</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section bg-alt-tint">
+      <div class="container scroll-reveal">
+        <div class="section-header">
+          <span class="subtitle">Demonstrating Competence</span>
+          <h2 class="title">My Projects</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <!-- Filter tabs for Projects -->
+        <div class="projects-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="automation">Automation & ML</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-container">
+          
+          <!-- Splittr Card -->
+          <article class="project-card glass-card" data-category="web">
+            <div class="project-img-placeholder">
+              <i class="fa-solid fa-car-side"></i>
+              <div class="project-overlay">
+                <span class="btn btn-secondary trigger-detail" data-project="splittr">Explore Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Featured Web App</span>
+              <h3 class="project-title">Splittr - Ride Sharing</h3>
+              <p class="project-description">
+                A full-stack application deployed on Vercel facilitating automated ride fare splitting, integrated user authentication, real-time cost tracking, and ride management.
+              </p>
+              <div class="project-tech">
+                <span>Next.js</span>
+                <span>Tailwind CSS</span>
+                <span>Supabase</span>
+                <span>Vercel</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- College Event Management System Card -->
+          <article class="project-card glass-card" data-category="web">
+            <div class="project-img-placeholder">
+              <i class="fa-solid fa-calendar-days"></i>
+              <div class="project-overlay">
+                <span class="btn btn-secondary trigger-detail" data-project="college-event">Explore Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Full-Stack Dev</span>
+              <h3 class="project-title">College Event Manager</h3>
+              <p class="project-description">
+                Student-facing database system for event discovery, community coordination, and manager logs. Allowed event managers to coordinate schedules dynamically as Team Lead.
+              </p>
+              <div class="project-tech">
+                <span>HTML/CSS</span>
+                <span>MySQL</span>
+                <span>XAMPP</span>
+                <span>GitHub</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Expense Tracker Card -->
+          <article class="project-card glass-card" data-category="web">
+            <div class="project-img-placeholder">
+              <i class="fa-solid fa-wallet"></i>
+              <div class="project-overlay">
+                <span class="btn btn-secondary trigger-detail" data-project="expense-tracker">Explore Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Web Application</span>
+              <h3 class="project-title">Expense & Budget Tracker</h3>
+              <p class="project-description">
+                Personal finance dashboard providing budgeting utilities, real-time interactive charts, expense categories, and data storage for expenditure logging.
+              </p>
+              <div class="project-tech">
+                <span>Vanilla JS</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>CSS3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- WhatsApp Automation Card -->
+          <article class="project-card glass-card" data-category="automation">
+            <div class="project-img-placeholder">
+              <i class="fa-brands fa-whatsapp"></i>
+              <div class="project-overlay">
+                <span class="btn btn-secondary trigger-detail" data-project="whatsapp-auto">Explore Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">API Automation</span>
+              <h3 class="project-title">WhatsApp API Automation</h3>
+              <p class="project-description">
+                Automated session handling backend with QR code authentications, automated reply scheduling, profile picture fetching pipelines, and local cache databases.
+              </p>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>WhatsApp API</span>
+                <span>REST API</span>
+                <span>Express</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Trash to Treasure Card -->
+          <article class="project-card glass-card" data-category="automation">
+            <div class="project-img-placeholder">
+              <i class="fa-solid fa-recycle"></i>
+              <div class="project-overlay">
+                <span class="btn btn-secondary trigger-detail" data-project="trash-treasure">Explore Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">AI/ML & IoT</span>
+              <h3 class="project-title">Trash to Treasure</h3>
+              <p class="project-description">
+                Automated waste classification system created at HackForImpact. Categorizes garbage into e-waste, organic, and recyclable tracks using image analytics and IoT scripts.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>IoT Basics</span>
+                <span>Machine Learning</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- GSSoC & Open Source Card -->
+          <article class="project-card glass-card" data-category="automation">
+            <div class="project-img-placeholder">
+              <i class="fa-solid fa-code-fork"></i>
+              <div class="project-overlay">
+                <span class="btn btn-secondary trigger-detail" data-project="gssoc-contrib">Explore Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Open Source</span>
+              <h3 class="project-title">GSSoC Contributor</h3>
+              <p class="project-description">
+                Contributed features and resolved core bugs in high-traffic Python/Java repositories during GirlScript Summer of Code, collaborating directly with mentors.
+              </p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Java</span>
+                <span>Git/GitHub</span>
+                <span>Documentation</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+      <div class="container scroll-reveal">
+        <div class="section-header">
+          <span class="subtitle">Professional Solutions</span>
+          <h2 class="title">My Services</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Full-Stack Web Dev</h3>
+            <p>
+              Crafting custom, scalable web systems from scratch. Experience with modern JS frameworks (Next.js, Node.js) and standard design models.
+            </p>
+            <span class="service-tag">HTML • CSS • NextJS • Node</span>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Backend & DB Setup</h3>
+            <p>
+              Structuring clean backend architectures, secure RESTful APIs, and responsive database models using SQL (MySQL) and NoSQL (MongoDB, Supabase).
+            </p>
+            <span class="service-tag">Express • Rest API • MySQL • Mongo</span>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>AI/ML Integrations</h3>
+            <p>
+              Deploying custom predictive models, data analysis frameworks, and automated vision algorithms using Python tools like PyTorch and OpenCV.
+            </p>
+            <span class="service-tag">Python • PyTorch • TensorFlow • ML</span>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card glass-card">
+            <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>Workflow Automation</h3>
+            <p>
+              Building automated scripts, custom system integrations, cron jobs, and WhatsApp communication bots to optimize workflows and manual activities.
+            </p>
+            <span class="service-tag">NodeJS • Scripts • GitHub Actions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+    <section id="contact" class="contact-section bg-alt-tint">
+      <div class="container scroll-reveal">
+        <div class="section-header">
+          <span class="subtitle">Get In Touch</span>
+          <h2 class="title">Contact Me</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Sidebar -->
+          <div class="contact-info glass-card">
+            <h3>Let's collaborate!</h3>
+            <p>
+              I am open to summer internships, open-source collaborative projects, and freelance full-stack tasks. Fill out the form or reach out directly!
+            </p>
+            
+            <div class="contact-details-list">
+              <div class="contact-details-item">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <div>
+                  <strong>Email Me</strong>
+                  <a href="mailto:annujames.dummy@email.com">annujames.dummy@email.com</a>
+                </div>
+              </div>
+
+              <div class="contact-details-item">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <div>
+                  <strong>My Location</strong>
+                  <span>Kottayam, Kerala, India</span>
+                </div>
+              </div>
+
+              <div class="contact-details-item">
+                <i class="fa-brands fa-linkedin"></i>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <a href="https://linkedin.com/in/dummy-annu-james" target="_blank" rel="noopener noreferrer">linkedin.com/in/dummy-annu-james</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Beautiful Mini SVG Map Graphic -->
+            <div class="map-graphic-box">
+              <svg viewBox="0 0 100 100" class="mini-map-svg">
+                <circle cx="50" cy="50" r="45" fill="var(--glass-bg)" stroke="var(--primary-glow)" stroke-width="1.5" />
+                <path d="M25,50 Q40,30 50,20 Q60,30 75,50 Q50,85 25,50" fill="none" stroke="var(--accent-glow)" stroke-width="1" stroke-dasharray="2" />
+                <!-- Glowing Pin -->
+                <circle cx="50" cy="40" r="4" fill="var(--primary)" class="pulse-circle" />
+                <circle cx="50" cy="40" r="10" fill="none" stroke="var(--primary)" stroke-width="1" class="ping-circle" />
+              </svg>
+              <span class="map-caption"><i class="fa-solid fa-map-pin"></i> Kottayam, Kerala</span>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-container glass-card">
+            <form id="portfolio-contact-form" autocomplete="off">
+              <div class="form-row">
+                <div class="input-group">
+                  <input type="text" id="contact-name" name="name" required placeholder=" ">
+                  <label for="contact-name">Your Name</label>
+                  <span class="focus-border"></span>
+                  <i class="fa-solid fa-user input-icon"></i>
+                </div>
+                
+                <div class="input-group">
+                  <input type="email" id="contact-email" name="email" required placeholder=" ">
+                  <label for="contact-email">Your Email</label>
+                  <span class="focus-border"></span>
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <input type="text" id="contact-subject" name="subject" required placeholder=" ">
+                <label for="contact-subject">Subject</label>
+                <span class="focus-border"></span>
+                <i class="fa-solid fa-circle-info input-icon"></i>
+              </div>
+
+              <div class="input-group textarea-group">
+                <textarea id="contact-message" name="message" required placeholder=" " rows="5"></textarea>
+                <label for="contact-message">Message</label>
+                <span class="focus-border"></span>
+                <i class="fa-solid fa-message input-icon"></i>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="btn-submit-form">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footnotes Footer -->
+  <footer class="glass-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Annu James. Built with custom Vanilla CSS & JS.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/dummy-annu" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/dummy-annu-james" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SLEEK GLASSMORPHIC MODAL DRAWER FOR PROJECT DETAILS -->
+  <div id="project-detail-drawer" class="drawer-overlay">
+    <div class="drawer-panel glass-card">
+      <button class="drawer-close" aria-label="Close details"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="drawer-body" id="drawer-dynamic-content">
+        <!-- Content gets loaded dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic CSS Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Custom JavaScript logic -->
+  <script src="script.js"></script>
+</body>
+</html>
